@@ -84,7 +84,7 @@ public class FleetCarrierCalculator {
                 "Credits Left Over: " + ANSI_YELLOW + formatter.format(CREDITS_LEFT_OVER) + ANSI_RESET);
         System.out.println("-------------------------------------");
         System.out.println("Weekly Upkeep: " + ANSI_GREEN + "11,350,000" + ANSI_RESET);
-        System.out.println("Monthly Upkee: " + ANSI_GREEN + "48,642,857" + ANSI_RESET);
+        System.out.println("Monthly Upkeep: " + ANSI_GREEN + "48,642,857" + ANSI_RESET);
         System.out.println("Yearly Upkeep: " + ANSI_GREEN + "591,821,428" + ANSI_RESET);
         System.out.println("-------------------------------------");
     }
