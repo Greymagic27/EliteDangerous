@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FleetCarrierCalculator {
     private static final long TARGET_CREDITS = 10000000000L; // 10 billion
-    private static final long CURRENT_CREDITS = 4051476843L;
+    private static final long CURRENT_CREDITS = 4056398635L;
 
     private static final long COLONIA_TRITIUM = 270086 * 2000; // 270086 = Buy price // 2000 = 2000 tonnes to get to GA
     private static final long GA_TRITIUM = 150007 * 5000; // 150007 = Buy price // 5000 = 5000 tonnes to get around
