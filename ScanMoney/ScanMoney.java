@@ -34,6 +34,7 @@ public class ScanMoney {
                                                                            // (NON-FF)
 
         clearConsole();
+        System.out.println("Current Credits: " + ANSI_RED + formatter.format(CURRENT_CREDITS) + ANSI_RESET);
         System.out.println("-------------------------------------");
         System.out.println("Total Scan Earnings (FF): " + ANSI_LIGHT_BLUE + "\033[4m"
                 + formatter.format(payoutAmountMultiplier + scanValue) + ANSI_RESET);
@@ -42,6 +43,8 @@ public class ScanMoney {
                 "\tBiological Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(payoutAmountMultiplier)
                         + ANSI_RESET);
         System.out.println("\tPlanetary Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(scanValue) + ANSI_RESET);
+        System.out.println("New Credit Total: " + ANSI_YELLOW
+                + formatter.format(newCreditsFF) + ANSI_RESET);
         System.out.println("-------------------------------------");
         System.out.println("Total Scan Earnings (NON-FF): " + ANSI_LIGHT_BLUE + "\033[4m"
                 + formatter.format(scanValue + payoutAmount) + ANSI_RESET);
@@ -49,12 +52,7 @@ public class ScanMoney {
                 "\tBiological Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(payoutAmount)
                         + ANSI_RESET);
         System.out.println("\tPlanetary Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(scanValue) + ANSI_RESET);
-        System.out.println("-------------------------------------");
-        System.out.println("Current Credits: " + ANSI_YELLOW + formatter.format(CURRENT_CREDITS) + ANSI_RESET);
-        System.out.println("-------------------------------------");
-        System.out.println("New Credit Total (FF): " + ANSI_YELLOW
-                + formatter.format(newCreditsFF) + ANSI_RESET);
-        System.out.println("New Credit Total (NON-FF): " + ANSI_YELLOW
+        System.out.println("New Credit Total: " + ANSI_YELLOW
                 + formatter.format(newCreditsNONFF) + ANSI_RESET);
         System.out.println("-------------------------------------");
     }
