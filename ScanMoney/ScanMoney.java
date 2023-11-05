@@ -28,20 +28,34 @@ public class ScanMoney {
         long scanValue = getScanValue();
         long payoutAmount = getPayoutAmount();
         long payoutAmountMultiplier = payoutAmount * 5;
-        long newCredits = CURRENT_CREDITS + payoutAmountMultiplier + scanValue; // What I have + biological + planetary
+        long newCreditsFF = CURRENT_CREDITS + payoutAmountMultiplier + scanValue; // What I have + biological +
+                                                                                  // planetary (FF)
+        long newCreditsNONFF = CURRENT_CREDITS + payoutAmount + scanValue; // What I have + biological + planetary
+                                                                           // (NON-FF)
 
         clearConsole();
         System.out.println("-------------------------------------");
-        System.out.println("Total Scan Earnings: " + ANSI_LIGHT_BLUE + "\033[4m"
+        System.out.println("Total Scan Earnings (FF): " + ANSI_LIGHT_BLUE + "\033[4m"
                 + formatter.format(payoutAmountMultiplier + scanValue) + ANSI_RESET);
+
         System.out.println(
                 "\tBiological Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(payoutAmountMultiplier)
                         + ANSI_RESET);
         System.out.println("\tPlanetary Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(scanValue) + ANSI_RESET);
         System.out.println("-------------------------------------");
-        System.out.println("New Credit Total: " + ANSI_YELLOW
-                + formatter.format(newCredits) + ANSI_RESET);
+        System.out.println("Total Scan Earnings (NON-FF): " + ANSI_LIGHT_BLUE + "\033[4m"
+                + formatter.format(scanValue + payoutAmount) + ANSI_RESET);
+        System.out.println(
+                "\tBiological Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(payoutAmount)
+                        + ANSI_RESET);
+        System.out.println("\tPlanetary Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(scanValue) + ANSI_RESET);
+        System.out.println("-------------------------------------");
         System.out.println("Current Credits: " + ANSI_YELLOW + formatter.format(CURRENT_CREDITS) + ANSI_RESET);
+        System.out.println("-------------------------------------");
+        System.out.println("New Credit Total (FF): " + ANSI_YELLOW
+                + formatter.format(newCreditsFF) + ANSI_RESET);
+        System.out.println("New Credit Total (NON-FF): " + ANSI_YELLOW
+                + formatter.format(newCreditsNONFF) + ANSI_RESET);
         System.out.println("-------------------------------------");
     }
 
