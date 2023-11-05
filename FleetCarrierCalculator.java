@@ -3,25 +3,20 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class FleetCarrierCalculator {
-    private static final long TARGET_CREDITS = 10000000000L; // 10 billion
-    private static final long CURRENT_CREDITS = 5372481578L;
-
-    private static final long COLONIA_TRITIUM = 149807 * 2000; // 270086 = Buy price // 2000 = 2000 tonnes to get to GA
-    private static final long GA_TRITIUM = 150007 * 5000; // 150007 = Buy price // 5000 = 5000 tonnes to get around
-    private static final long T9_STORED_TRITIUM = 150007 * 752; // 50007 = Buy price // 752 = 752 tonnes to store in T9
-    private static final long TRITIUM_COST = COLONIA_TRITIUM + GA_TRITIUM + T9_STORED_TRITIUM;
+    private static final long CURRENT_CREDITS = 6794818298L;
+    private static final long TRITUM_TONNES = 752;
+    private static final long TRITIUM_COST = TRITUM_TONNES * 49454;
 
     private static final long CARRIER_COST = 5445000000L;
-    private static final long CREDITS_DUMPED_INTO_CARRIER = 1000000000; // 1 billion
+    private static final long CREDITS_DUMPED_INTO_CARRIER = 520000000; // 520 million
     private static final long TOTAL_COST = TRITIUM_COST + CARRIER_COST + CREDITS_DUMPED_INTO_CARRIER;
-    private static final long CREDITS_LEFT_OVER = TARGET_CREDITS - TOTAL_COST;
+    private static final long CREDITS_LEFT_OVER = CURRENT_CREDITS - TOTAL_COST;
 
     private static final Scanner scanner = new Scanner(System.in);
 
     private static final String ANSI_RED = "\u001B[31m";
     private static final String ANSI_LIGHT_BLUE = "\u001B[94m";
     private static final String ANSI_YELLOW = "\u001B[33m";
-    private static final String ANSI_UNDERLINE = "\033[4m";
     private static final String ANSI_GREEN = "\u001B[32m";
     private static final String ANSI_RESET = "\u001B[0m";
 
@@ -43,7 +38,6 @@ public class FleetCarrierCalculator {
         long payoutAmount = getPayoutAmount();
         long payoutAmountMultiplier = payoutAmount * 5;
         long newCredits = CURRENT_CREDITS + payoutAmountMultiplier + scanValue; // What I have + biological + planetary
-        long remainingCredits = TARGET_CREDITS - newCredits;
 
         clearConsole();
         System.out.println("-------------------------------------");
@@ -54,29 +48,20 @@ public class FleetCarrierCalculator {
                         + ANSI_RESET);
         System.out.println("\tPlanetary Scan Earnings: " + ANSI_LIGHT_BLUE + formatter.format(scanValue) + ANSI_RESET);
         System.out.println("-------------------------------------");
-        System.out.println(
-                "Target Credits: " + ANSI_YELLOW + ANSI_UNDERLINE + formatter.format(TARGET_CREDITS) + ANSI_RESET);
         System.out.println("New Credit Total: " + ANSI_YELLOW
                 + formatter.format(newCredits) + ANSI_RESET);
         System.out.println("Current Credits: " + ANSI_YELLOW + formatter.format(CURRENT_CREDITS) + ANSI_RESET);
         System.out.println("-------------------------------------");
-
-        System.out.println(
-                "Further Credits Needed For Carrier Funds: " + ANSI_YELLOW + ANSI_UNDERLINE
-                        + formatter.format(remainingCredits)
-                        + ANSI_RESET); // How much until I get to 7 billion
         System.out.println("\t Carrier Cost: " + ANSI_RED + formatter.format(CARRIER_COST) + ANSI_RESET);
         System.out.println("\t\t Base Price: " + ANSI_RED + "5,000,000,000" + ANSI_RESET);
         System.out.println("\t\t Universal Cartographics: " + ANSI_RED + "150,000,000" + ANSI_RESET);
         System.out.println("\t\t Vista Genomics: " + ANSI_RED + "150,000,000" + ANSI_RESET);
         System.out.println("\t\t Repair: " + ANSI_RED + "50,000,000" + ANSI_RESET);
-        System.out.println("\t\t Armory: " + ANSI_RED + "95,000,000" + ANSI_RESET);
         System.out
                 .println("\t\t Credits Dumped Into Carrier: " + ANSI_RED + formatter.format(CREDITS_DUMPED_INTO_CARRIER)
                         + ANSI_RESET);
-        System.out.println("\t Tritium Cost: " + ANSI_RED + formatter.format(TRITIUM_COST) + ANSI_RESET);
-        System.out.println("\t\t Colonia Tritium: " + ANSI_RED + formatter.format(COLONIA_TRITIUM) + ANSI_RESET);
-        System.out.println("\t\t GA Tritium: " + ANSI_RED + formatter.format(GA_TRITIUM) + ANSI_RESET);
+        System.out.println("\t Tritium Cost: " + ANSI_RED + formatter.format(TRITIUM_COST) + ANSI_RESET + ANSI_BLUE
+                + formatter.format(TRITUM_TONNES) + ANSI_RESET);
 
         System.out.println("Total Cost: " + ANSI_RED + formatter.format(TOTAL_COST) + ANSI_RESET);
         System.out.println("-------------------------------------");
