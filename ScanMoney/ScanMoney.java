@@ -3,7 +3,7 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class ScanMoney {
-    private static final long CURRENT_CREDITS = 6794818298L;
+    private static final long CURRENT_CREDITS = 735791577L;
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -28,12 +28,11 @@ public class ScanMoney {
         long scanValue = getScanValue();
         long payoutAmount = getPayoutAmount();
         long payoutAmountMultiplier = payoutAmount * 5;
-        long newCreditsFF = CURRENT_CREDITS + payoutAmountMultiplier + scanValue; // What I have + biological +
-                                                                                  // planetary (FF)
-        long newCreditsNONFF = CURRENT_CREDITS + payoutAmount + scanValue; // What I have + biological + planetary
-                                                                           // (NON-FF)
+        long newCreditsFF = CURRENT_CREDITS + payoutAmountMultiplier + scanValue;
+        long newCreditsNONFF = CURRENT_CREDITS + payoutAmount + scanValue;
 
         clearConsole();
+        System.out.println("-------------------------------------");
         System.out.println("Current Credits: " + ANSI_RED + formatter.format(CURRENT_CREDITS) + ANSI_RESET);
         System.out.println("-------------------------------------");
         System.out.println("Total Scan Earnings (FF): " + ANSI_LIGHT_BLUE + "\033[4m"
