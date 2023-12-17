@@ -3,7 +3,7 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class ScanMoney {
-    private static final long CURRENT_CREDITS = 7222068205L;
+    private static final long CURRENT_CREDITS = 7379856856L;
 
     private static final Scanner scanner = new Scanner(System.in);
 
