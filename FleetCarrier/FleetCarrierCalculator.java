@@ -3,7 +3,7 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class FleetCarrierCalculator {
-    private static final long CURRENT_CREDITS = 7379856856L;
+    private static final long CURRENT_CREDITS = 7582843380L;
     private static final long TRITUM_TONNES = 5000;
     private static final long TRITIUM_COST = TRITUM_TONNES * 50778;
 
