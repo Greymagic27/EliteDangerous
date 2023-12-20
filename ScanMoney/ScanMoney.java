@@ -3,7 +3,6 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class ScanMoney {
-    private static final long CURRENT_CREDITS = 7582843380L;
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -23,8 +22,8 @@ public class ScanMoney {
 
     private static void runProgram() {
         NumberFormat formatter = new DecimalFormat("#,###");
-        System.out.println(ANSI_RED + "[UPDATE CREDITS AFTER SELLING DATA]" + ANSI_RESET);
 
+        long CURRENT_CREDITS = currentCredits();
         long scanValue = getScanValue();
         long payoutAmount = getPayoutAmount();
         long payoutAmountMultiplier = payoutAmount * 5;
@@ -54,6 +53,18 @@ public class ScanMoney {
         System.out.println("New Credit Total: " + ANSI_YELLOW
                 + formatter.format(newCreditsNONFF) + ANSI_RESET);
         System.out.println("-------------------------------------");
+    }
+
+    private static long currentCredits() {
+        System.out.print("Enter current credits: ");
+        String input = scanner.nextLine().replaceAll("\\s+", "");
+        input = input.replaceAll(",", "");
+        try {
+            return Long.parseLong(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a valid number.");
+            return currentCredits();
+        }
     }
 
     private static long getScanValue() {

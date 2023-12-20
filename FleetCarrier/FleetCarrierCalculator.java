@@ -3,7 +3,10 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class FleetCarrierCalculator {
-    private static final long CURRENT_CREDITS = 7582843380L;
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    private static final long CURRENT_CREDITS = currentCredits();
     private static final long TRITUM_TONNES = 5000;
     private static final long TRITIUM_COST = TRITUM_TONNES * 50778;
 
@@ -11,8 +14,6 @@ public class FleetCarrierCalculator {
     private static final long CREDITS_DUMPED_INTO_CARRIER = 520000000L; // 520 million
     private static final long TOTAL_COST = TRITIUM_COST + CARRIER_COST + CREDITS_DUMPED_INTO_CARRIER;
     private static final long CREDITS_LEFT_OVER = CURRENT_CREDITS - TOTAL_COST;
-
-    private static final Scanner scanner = new Scanner(System.in);
 
     private static final String ANSI_RED = "\u001B[31m";
     private static final String ANSI_LIGHT_BLUE = "\u001B[94m";
@@ -58,6 +59,18 @@ public class FleetCarrierCalculator {
         System.out.println("Monthly Upkeep: " + ANSI_GREEN + "42,214,285" + ANSI_RESET);
         System.out.println("Yearly Upkeep: " + ANSI_GREEN + "513,607,142" + ANSI_RESET);
         System.out.println("-------------------------------------");
+    }
+
+    private static long currentCredits() {
+        System.out.print("Enter current credits: ");
+        String input = scanner.nextLine().replaceAll("\\s+", "");
+        input = input.replaceAll(",", "");
+        try {
+            return Long.parseLong(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a valid number.");
+            return currentCredits();
+        }
     }
 
     private static void clearConsole() {
