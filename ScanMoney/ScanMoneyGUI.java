@@ -29,6 +29,7 @@ public class ScanMoneyGUI extends JFrame {
         scanValueField = new JTextField();
         payoutAmountField = new JTextField();
         firstFootfallCheckbox = new JCheckBox();
+        firstFootfallCheckbox.setSelected(true);
 
         inputPanel.add(creditsLabel);
         inputPanel.add(creditsField);
@@ -45,6 +46,33 @@ public class ScanMoneyGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 calculate();
             }
+
+            private void calculate() {
+                try {
+                    long currentCredits = Long.parseLong(creditsField.getText().replaceAll(",", ""));
+                    long scanValue = Long.parseLong(scanValueField.getText().replaceAll(",", ""));
+                    long payoutAmount = Long.parseLong(payoutAmountField.getText().replaceAll(",", ""));
+                    boolean isFirstFootfall = firstFootfallCheckbox.isSelected();
+
+                    long payoutAmountMultiplier = isFirstFootfall ? payoutAmount * 5 : payoutAmount;
+                    long newCreditsFF = currentCredits + payoutAmountMultiplier + scanValue;
+
+                    NumberFormat formatter = new DecimalFormat("#,###");
+
+                    outputArea.append("Current Credits: " + formatter.format(currentCredits) + "\n");
+                    outputArea.append("-------------------------------------\n");
+                    outputArea.append(
+                            "Total Scan Earnings: " + formatter.format(payoutAmountMultiplier + scanValue) + "\n");
+                    outputArea.append("\tBiological Scan Earnings: " + formatter.format(payoutAmountMultiplier) + "\n");
+                    outputArea.append("\tPlanetary Scan Earnings: " + formatter.format(scanValue) + "\n");
+                    outputArea.append("-------------------------------------\n");
+                    outputArea.append("New Credit Total: " + formatter.format(newCreditsFF) + "\n");
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(ScanMoneyGUI.this, "Please enter valid numbers in all fields.",
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
         });
 
         outputArea = new JTextArea();
@@ -56,33 +84,6 @@ public class ScanMoneyGUI extends JFrame {
         add(inputPanel, BorderLayout.NORTH);
         add(new JScrollPane(outputArea), BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
-    }
-
-    private void calculate() {
-        try {
-            long currentCredits = Long.parseLong(creditsField.getText().replaceAll(",", ""));
-            long scanValue = Long.parseLong(scanValueField.getText().replaceAll(",", ""));
-            long payoutAmount = Long.parseLong(payoutAmountField.getText().replaceAll(",", ""));
-            boolean isFirstFootfall = firstFootfallCheckbox.isSelected();
-
-            long payoutAmountMultiplier = isFirstFootfall ? payoutAmount * 5 : payoutAmount;
-            long newCreditsFF = currentCredits + payoutAmountMultiplier + scanValue;
-
-            NumberFormat formatter = new DecimalFormat("#,###");
-
-            outputArea.setText("-------------------------------------\n");
-            outputArea.append("Current Credits: " + formatter.format(currentCredits) + "\n");
-            outputArea.append("-------------------------------------\n");
-            outputArea
-                    .append("Total Scan Earnings: " + formatter.format(payoutAmountMultiplier + scanValue) + "\n");
-            outputArea.append("\tBiological Scan Earnings: " + formatter.format(payoutAmountMultiplier) + "\n");
-            outputArea.append("\tPlanetary Scan Earnings: " + formatter.format(scanValue) + "\n");
-            outputArea.append("-------------------------------------\n");
-            outputArea.append("New Credit Total: " + formatter.format(newCreditsFF) + "\n");
-        } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Please enter valid numbers in all fields.", "Error",
-                    JOptionPane.ERROR_MESSAGE);
-        }
     }
 
     public static void main(String[] args) {
