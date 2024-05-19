@@ -32,3 +32,14 @@ You keep EDDiscovery open on another monitor whilst playing so you can see if an
 - This is the main website to use when exploring. EDMC will send any new data to EDSM so your newly discovered systems will appear there.
 - If you're out in the black and want to sell your data, you can log into EDSM and then go to https://www.edsm.net/en/search/stations and select 'Facilities' as 'Universal Cartographics' and 'Vista Geonomics'. If you click search this will search relative to your commander position so it will come up with the closest Fleet Carriers/Stations that have those services.
   - https://www.edsm.net/en/search/stations/index/service/32/service/84/sortBy/distanceCMDR may work as an auto search link
+
+## Ship build
+- Updated ship build: https://s.orbis.zone/n_w6
+- Locations that sell the modules needed near your dolphin: https://inara.cz/elite/nearest-outfitting/?formbrief=1&pa3%5B%5D=70057&pa3%5B%5D=92161&ps1=Oto&pi18=0&pi19=0&pi17=0
+
+Changes:
+1) Remove Fuel Transfer Limpit Controller
+2) Remove all hardpoints
+3) Remove point defence utility slots
+4) Upgrade to a 4A shield generator
+5) Upgrade to a 2A AFMU (Auto Field-Maintainence Unit)
