@@ -43,3 +43,7 @@ Changes:
 3) Remove point defence utility slots
 4) Upgrade to a 4A shield generator
 5) Upgrade to a 2A AFMU (Auto Field-Maintainence Unit)
+
+## Trip
+![image](https://github.com/Greymagic27/EliteDangerous/assets/46166848/711e0bb9-7826-4b11-83b1-cc54c610cfb3)
+
