@@ -158,3 +158,5 @@ Stuemeae HX-L B7-86
 Stuemeae ZK-P B5-110
 Stuemeae EG-Y D8217
 Stuemeae MS-U C2-3820
+Stuemeae FW-W C1-5716
+Stuemeae FW-W C1-3114
