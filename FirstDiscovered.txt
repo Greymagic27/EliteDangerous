@@ -160,3 +160,7 @@ Stuemeae EG-Y D8217
 Stuemeae MS-U C2-3820
 Stuemeae FW-W C1-5716
 Stuemeae FW-W C1-3114
+Pueloe DU-T B18-5
+Pueloe OY-R D4-187
+Pueloe NY-R D4-104
+Pueloe CZ-T B18-4
