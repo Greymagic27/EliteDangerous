@@ -7,12 +7,12 @@ public class FleetCarrierCalculator {
     private static final Scanner scanner = new Scanner(System.in);
 
     private static final long CURRENT_CREDITS = currentCredits();
-    private static final long TRITUM_TONNES = 5000;
-    private static final long TRITIUM_COST = TRITUM_TONNES * 50778;
+    private static final long TRITUM_TONNES = 4500;
+    private static final long TRITIUM_COST = TRITUM_TONNES * 50360;
 
-    private static final long CARRIER_COST = 5350000000L;
+    private static final long CARRIER_COST = 5550000000L;
     private static final long CREDITS_DUMPED_INTO_CARRIER = 520000000L; // 520 million
-    private static final long TOTAL_COST = TRITIUM_COST + CARRIER_COST + CREDITS_DUMPED_INTO_CARRIER;
+    private static final long TOTAL_COST = TRITIUM_COST + CARRIER_COST + CREDITS_DUMPED_INTO_CARRIER; // https://www.spansh.co.uk/fleet-carrier/results/A566D7E6-AF1C-11EF-AB73-A5F7E0FE48D2?destination_systems=%5B%22Sagittarius%20A*%22%5D&source_system=Kruger%2060&used_capacity=3240
     private static final long CREDITS_LEFT_OVER = CURRENT_CREDITS - TOTAL_COST;
 
     private static final String ANSI_RED = "\u001B[31m";
@@ -43,7 +43,7 @@ public class FleetCarrierCalculator {
         System.out.println("\t\t Base Price: " + ANSI_RED + "5,000,000,000" + ANSI_RESET);
         System.out.println("\t\t Universal Cartographics: " + ANSI_RED + "150,000,000" + ANSI_RESET);
         System.out.println("\t\t Vista Genomics: " + ANSI_RED + "150,000,000" + ANSI_RESET);
-        System.out.println("\t\t Repair: " + ANSI_RED + "50,000,000" + ANSI_RESET);
+        System.out.println("\t\t Shipyard: " + ANSI_RED + "250,000,000" + ANSI_RESET);
         System.out
                 .println("\t\t Credits Dumped Into Carrier: " + ANSI_RED + formatter.format(CREDITS_DUMPED_INTO_CARRIER)
                         + ANSI_RESET);
@@ -55,9 +55,9 @@ public class FleetCarrierCalculator {
         System.out.println(
                 "Credits Left Over: " + ANSI_YELLOW + formatter.format(CREDITS_LEFT_OVER) + ANSI_RESET);
         System.out.println("-------------------------------------");
-        System.out.println("Weekly Upkeep: " + ANSI_GREEN + "9,850,000" + ANSI_RESET);
-        System.out.println("Monthly Upkeep: " + ANSI_GREEN + "42,214,285" + ANSI_RESET);
-        System.out.println("Yearly Upkeep: " + ANSI_GREEN + "513,607,142" + ANSI_RESET);
+        System.out.println("Weekly Upkeep: " + ANSI_GREEN + "14,850,000" + ANSI_RESET);
+        System.out.println("Monthly Upkeep: " + ANSI_GREEN + "63,642,857" + ANSI_RESET);
+        System.out.println("Yearly Upkeep: " + ANSI_GREEN + "774,321,428" + ANSI_RESET);
         System.out.println("-------------------------------------");
     }
 
