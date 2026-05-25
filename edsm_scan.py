@@ -43,7 +43,7 @@ def fetch_bodies(system_name):
 
 
 def classify_system(data):
-    """Returns (category, star_type) for the most notable star in the system."""
+    """Returns (category, star_subtype) for the most notable star in the system."""
     if "error" in data:
         return "ERROR", data["error"]
     bodies = data.get("bodies", [])
@@ -52,12 +52,12 @@ def classify_system(data):
 
     stars = [b for b in bodies if b.get("type") == "Star"]
     for star in stars:
-        sub = (star.get("type") or "").lower()
+        sub = (star.get("subType") or "").lower()
         for keyword, label in SPECIAL_TYPES.items():
             if keyword in sub:
-                return label, star.get("type", "")
+                return label, star.get("subType", "")
     if stars:
-        return "normal", stars[0].get("type", "unknown")
+        return "normal", stars[0].get("subType", "unknown")
     return "no stars", ""
 
 
@@ -77,14 +77,14 @@ def needs_scan(row):
     if row is None:
         return True
     cat = row.get("category", "").strip()
-    sub = row.get("type", "").strip()
+    sub = row.get("subtype", "").strip()
     return cat in ("", "NOT FOUND", "ERROR", "no stars") or sub in ("", "unknown")
 
 
 def main():
     parser = argparse.ArgumentParser(description="Scan Elite Dangerous systems on EDSM for star types.")
     parser.add_argument("--input",  default="FirstDiscovered.txt", help="System list (default: FirstDiscovered.txt)")
-    parser.add_argument("--output", default="FirstDiscoveredTypes.csv",    help="CSV to update (default: edsm_results.csv)")
+    parser.add_argument("--output", default="edsm_results.csv",    help="CSV to update (default: edsm_results.csv)")
     parser.add_argument("--delay",  type=float, default=0.25,      help="Seconds between API requests (default: 0.25)")
     args = parser.parse_args()
 
@@ -115,36 +115,36 @@ def main():
     for i, name in enumerate(to_scan, 1):
         print(f"[{i:>4}/{len(to_scan)}] {name}", end=" ... ", flush=True)
         data = fetch_bodies(name)
-        category, type = classify_system(data)
+        category, subtype = classify_system(data)
 
-        results[name] = {"system": name, "type": type}
+        results[name] = {"system": name, "category": category, "subtype": subtype}
 
         if category == "BLACK HOLE":
-            black_holes.append((name, type))
-            print(type)
+            black_holes.append((name, subtype))
+            print(f"BLACK HOLE ({subtype})")
         elif category == "NEUTRON STAR":
-            neutron_stars.append((name, type))
-            print(type)
+            neutron_stars.append((name, subtype))
+            print(f"NEUTRON STAR ({subtype})")
         elif category == "WHITE DWARF":
-            white_dwarfs.append((name, type))
-            print(type)
+            white_dwarfs.append((name, subtype))
+            print(f"white dwarf ({subtype})")
         elif category == "NOT FOUND":
             not_found.append(name)
-            print("NOT FOUND")
+            print("not found on EDSM")
         elif category == "ERROR":
-            errors.append((name, type))
-            print(f"ERROR: {type}")
+            errors.append((name, subtype))
+            print(f"ERROR: {subtype}")
         else:
-            print(type)
+            print(subtype)
 
         time.sleep(args.delay)
 
     # Write CSV in original list order
     with open(args.output, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["system", "category", "type"])
+        writer = csv.DictWriter(f, fieldnames=["system", "subtype"])
         writer.writeheader()
         for name in systems:
-            writer.writerow(results.get(name, {"system": name, "category": "", "type": ""}))
+            writer.writerow(results.get(name, {"system": name, "subtype": ""}))
 
     # Summary
     print("\n" + "=" * 50)
