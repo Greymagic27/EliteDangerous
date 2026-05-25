@@ -80,7 +80,7 @@ def needs_scan(row):
 def main():
     parser = argparse.ArgumentParser(description="Scan Elite Dangerous systems on EDSM for star types.")
     parser.add_argument("--input",  default="FirstDiscovered.txt", help="System list (default: FirstDiscovered.txt)")
-    parser.add_argument("--output", default="edsm_results.csv",    help="CSV to update (default: edsm_results.csv)")
+    parser.add_argument("--output", default="FirstDiscoveredTypes.csv",    help="CSV to update (default: edsm_results.csv)")
     parser.add_argument("--delay",  type=float, default=0.25,      help="Seconds between API requests (default: 0.25)")
     args = parser.parse_args()
 
