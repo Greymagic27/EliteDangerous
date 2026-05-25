@@ -153,9 +153,6 @@ def main():
             print(f"  {name}")
 
     print(f"\nCSV updated: '{args.output}'")
-    if errors or not_found:
-        sys.exit(1)
-
 
 if __name__ == "__main__":
     main()
