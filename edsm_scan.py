@@ -22,7 +22,7 @@ import sys
 import os
 
 EDSM_URL = "https://www.edsm.net/api-system-v1/bodies"
-HEADERS = {"User-Agent": "EDSM-SystemScanner"}
+HEADERS = {"User-Agent": "EDSM-BlackHoleScanner/1.0 (personal research tool)"}
 
 SPECIAL_TYPES = {
     "black hole": "BLACK HOLE",
@@ -141,10 +141,10 @@ def main():
 
     # Write CSV in original list order
     with open(args.output, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["system", "subtype"])
+        writer = csv.DictWriter(f, fieldnames=["system", "category", "subtype"])
         writer.writeheader()
         for name in systems:
-            writer.writerow(results.get(name, {"system": name, "subtype": ""}))
+            writer.writerow(results.get(name, {"system": name, "category": "", "subtype": ""}))
 
     # Summary
     print("\n" + "=" * 50)
