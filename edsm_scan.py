@@ -41,7 +41,7 @@ def classify_system(data):
     stars = [b for b in bodies if b.get("type") == "Star"]
     if stars:
         return stars[0].get("subType") or "unknown"
-    return "no stars"
+    return "NO STARS"
 
 
 def load_existing_csv(path):
@@ -60,7 +60,7 @@ def needs_scan(row):
     if row is None:
         return True
     sub = row.get("type", "").strip()
-    return sub in ("", "NOT FOUND", "ERROR", "no stars", "unknown")
+    return sub in ("", "NOT FOUND", "ERROR", "NO STARS", "unknown")
 
 
 def main():
@@ -101,7 +101,7 @@ def main():
 
         results[name] = {"system": name, "type": star_type}
 
-        if star_type == "NOT FOUND":
+        if star_type in ("NOT FOUND", "NO STARS"):
             not_found.append(name)
             print("not found on EDSM")
         elif star_type == "ERROR":
@@ -153,6 +153,8 @@ def main():
             print(f"  {name}")
 
     print(f"\nCSV updated: '{args.output}'")
+    if errors or not_found:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
