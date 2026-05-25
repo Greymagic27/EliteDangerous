@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'FirstDiscovered.txt'
+      - 'FirstDiscoveredTypes.csv'
   workflow_dispatch:
 
 jobs:
