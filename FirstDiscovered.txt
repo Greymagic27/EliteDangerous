@@ -325,6 +325,7 @@ M7 Sector YY-Y b1-6
 Swoilz CG-E a38-0
 Swoilz OS-W b7-3
 Swoilz ZT-D b4-1
+Swoilz DX-R d5-71
 Aucoks WS-J b1
 Aucoks HG-K c10-2
 Aucoks AQ-N d7-2
@@ -597,3 +598,33 @@ Mylaifai UW-J a8-38
 Mylaifai JC-B d1-5518
 Mylaifai JC-B d1-4523
 Mylaifai XA-B a13-1
+Bleae Aewsy KC-D d12-622
+Dryao Aowsy GM-D d12-4454
+Dryao Aowsy LS-B d13-339
+Myriesly DE-J c9-884
+Myriesly VP-D c26-5203
+Phua Aub NI-Z c27-3920
+Phua Aub NI-Z c27-1144
+Phua Aub NI-Z c27-7454
+Phua Aub NI-Z c27-1684
+Phua Aub NI-Z c27-1840
+Phua Aub BR-Y b55-127
+Phua Aub NI-Z c27-4791
+Phua Aub NI-Z c27-3786
+Phua Aub IR-N e6-1637
+Phua Aub NI-Z c27-5597
+Phua Aub NI-Z c27-8000
+Phua Aub NI-Z c27-6372
+Phua Aub NI-Z c27-7093
+Phua Aub AR-Y b55-125
+Phua Aub NI-Z c27-7673
+Phua Aub AR-Y b55-108
+Phua Aub NI-Z c27-7937
+Phua Aub NI-Z c27-1843
+Phua Aub NI-Z c27-3416
+Phua Aub NI-Z c27-4193
+Phua Aub NI-Z c27-4526
+Phua Aub UO-Z d13-6286
+Phua Aub NI-Z c27-6136
+Phua Aub NI-Z c27-7792
+Phua Aub NI-Z c27-5025
