@@ -1,0 +1,1 @@
+[![EDSM Star Type Scanner](https://github.com/Greymagic27/EliteDangerous/actions/workflows/star-type-scanner.yml/badge.svg)](https://github.com/Greymagic27/EliteDangerous/actions/workflows/star-type-scanner.yml)
