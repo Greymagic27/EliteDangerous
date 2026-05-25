@@ -5,11 +5,7 @@ Reads FirstDiscovered.txt from the repo, queries EDSM for any systems
 not already in edsm_results.csv (or missing a star type), and updates
 the CSV in place.
 
-Designed to run as a GitHub Action or locally:
-    python edsm_scan.py
-
-Optional arguments:
-    python edsm_scan.py --input FirstDiscovered.txt --output edsm_results.csv --delay 0.25
+Looks for 'FirstDiscovered.txt' in the directory you are running it in
 """
 
 import csv
