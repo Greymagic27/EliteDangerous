@@ -2,6 +2,7 @@ name: EDSM Star Type Scanner
 
 on:
   push:
+    branches: [ "main" ]
     paths:
       - 'FirstDiscovered.txt'
       - 'FirstDiscoveredTypes.csv'
