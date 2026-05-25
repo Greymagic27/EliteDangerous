@@ -20,12 +20,6 @@ import os
 EDSM_URL = "https://www.edsm.net/api-system-v1/bodies"
 HEADERS = {"User-Agent": "EDSM-BlackHoleScanner/1.0 (personal research tool)"}
 
-SPECIAL_TYPES = {
-    "black hole": "BLACK HOLE",
-    "neutron star": "NEUTRON STAR",
-    "white dwarf": "WHITE DWARF",
-}
-
 
 def fetch_bodies(system_name):
     params = urllib.parse.urlencode({"systemName": system_name})
@@ -39,22 +33,15 @@ def fetch_bodies(system_name):
 
 
 def classify_system(data):
-    """Returns (category, star_subtype) for the most notable star in the system."""
     if "error" in data:
-        return "ERROR", data["error"]
+        return "ERROR"
     bodies = data.get("bodies", [])
     if not bodies:
-        return "NOT FOUND", ""
-
+        return "NOT FOUND"
     stars = [b for b in bodies if b.get("type") == "Star"]
-    for star in stars:
-        sub = (star.get("subType") or "").lower()
-        for keyword, label in SPECIAL_TYPES.items():
-            if keyword in sub:
-                return label, star.get("subType", "")
     if stars:
-        return "normal", stars[0].get("subType", "unknown")
-    return "no stars", ""
+        return stars[0].get("subType") or "unknown"
+    return "no stars"
 
 
 def load_existing_csv(path):
@@ -72,9 +59,8 @@ def needs_scan(row):
     """True if this row is missing a usable classification."""
     if row is None:
         return True
-    cat = row.get("category", "").strip()
-    sub = row.get("subtype", "").strip()
-    return cat in ("", "NOT FOUND", "ERROR", "no stars") or sub in ("", "unknown")
+    sub = row.get("type", "").strip()
+    return sub in ("", "NOT FOUND", "ERROR", "no stars", "unknown")
 
 
 def main():
@@ -106,41 +92,39 @@ def main():
     print()
 
     results = dict(existing)
-    black_holes, neutron_stars, white_dwarfs, not_found, errors = [], [], [], [], []
+    not_found, errors, black_holes, neutron_stars, white_dwarfs = [], [], [], [], []
 
     for i, name in enumerate(to_scan, 1):
         print(f"[{i:>4}/{len(to_scan)}] {name}", end=" ... ", flush=True)
         data = fetch_bodies(name)
-        category, subtype = classify_system(data)
+        star_type = classify_system(data)
 
-        results[name] = {"system": name, "category": category, "subtype": subtype}
+        results[name] = {"system": name, "type": star_type}
 
-        if category == "BLACK HOLE":
-            black_holes.append((name, subtype))
-            print(f"BLACK HOLE ({subtype})")
-        elif category == "NEUTRON STAR":
-            neutron_stars.append((name, subtype))
-            print(f"NEUTRON STAR ({subtype})")
-        elif category == "WHITE DWARF":
-            white_dwarfs.append((name, subtype))
-            print(f"white dwarf ({subtype})")
-        elif category == "NOT FOUND":
+        if star_type == "NOT FOUND":
             not_found.append(name)
             print("not found on EDSM")
-        elif category == "ERROR":
-            errors.append((name, subtype))
-            print(f"ERROR: {subtype}")
+        elif star_type == "ERROR":
+            errors.append(name)
+            print(f"ERROR: {star_type}")
         else:
-            print(subtype)
+            print(star_type)
+            st = star_type.lower()
+            if "black hole" in st:
+                black_holes.append(name)
+            elif "neutron star" in st:
+                neutron_stars.append(name)
+            elif "white dwarf" in st:
+                white_dwarfs.append(name)
 
         time.sleep(args.delay)
 
     # Write CSV in original list order
     with open(args.output, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["system", "category", "subtype"])
+        writer = csv.DictWriter(f, fieldnames=["system", "type"])
         writer.writeheader()
         for name in systems:
-            writer.writerow(results.get(name, {"system": name, "category": "", "subtype": ""}))
+            writer.writerow(results.get(name, {"system": name, "type": ""}))
 
     # Summary
     print("\n" + "=" * 50)
@@ -156,17 +140,17 @@ def main():
     if black_holes:
         print("\n--- Black holes ---")
         for name, sub in black_holes:
-            print(f"  {name}  ({sub})")
+            print(f"  {name}")
 
     if neutron_stars:
         print("\n--- Neutron stars ---")
         for name, sub in neutron_stars:
-            print(f"  {name}  ({sub})")
+            print(f"  {name}")
 
     if white_dwarfs:
         print("\n--- White dwarfs ---")
         for name, sub in white_dwarfs:
-            print(f"  {name}  ({sub})")
+            print(f"  {name}")
 
     print(f"\nCSV updated: '{args.output}'")
 
