@@ -628,3 +628,6 @@ Phua Aub UO-Z d13-6286
 Phua Aub NI-Z c27-6136
 Phua Aub NI-Z c27-7792
 Phua Aub NI-Z c27-5025
+Phua Aub VF-A b55-8
+Phroi Pri TZ-Y a82-12
+Phroi Pri TF-L d9-10083
