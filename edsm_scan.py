@@ -139,17 +139,17 @@ def main():
 
     if black_holes:
         print("\n--- Black holes ---")
-        for name, sub in black_holes:
+        for name in black_holes:
             print(f"  {name}")
 
     if neutron_stars:
         print("\n--- Neutron stars ---")
-        for name, sub in neutron_stars:
+        for name in neutron_stars:
             print(f"  {name}")
 
     if white_dwarfs:
         print("\n--- White dwarfs ---")
-        for name, sub in white_dwarfs:
+        for name in white_dwarfs:
             print(f"  {name}")
 
     print(f"\nCSV updated: '{args.output}'")
