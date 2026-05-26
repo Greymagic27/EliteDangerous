@@ -578,7 +578,6 @@ Byua Ain EN-H d11-1559
 Eorm Scrua KA-A d1093
 Eorm Scrua KA-A d616
 Oephaird KC-B d1-499
-Oephaird VJ-H d10-276
 Eos Aowsy NA-H b51-51
 Eos Aowsy QA-H b51-250
 Eesholt GQ-G a106-109
@@ -636,3 +635,7 @@ Phua Aub BL-U b30-0
 Phua Aub CL-W c15-9353
 Phua Aub EW-U c16-7644
 Phua Aub KN-R c18-5527
+Phua Aub YB-G b39-155
+Phua Aub QY-I d9-6457
+Phua Aub YU-P e5-2699
+Phua Aub AN-G c25-5224
