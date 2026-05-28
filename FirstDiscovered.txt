@@ -549,6 +549,7 @@ Drojeae EV-M c8-0
 Drojeae DV-M c8-3
 Drojeae SX-V b18-0
 Drojeae DA-S b20-0
+Nyeajaae SC-V d2-7
 Flyiedgiae XG-Z b28-0
 Flyiedgiae DB-O d6-12
 Flyiedgiae ND-A c14-3
