@@ -640,3 +640,6 @@ Phua Aub YB-G b39-155
 Phua Aub QY-I d9-6457
 Phua Aub YU-P e5-2699
 Phua Aub AN-G c25-5224
+Phua Aub MX-U f2-4148
+Phua Aub DD-G c25-5
+Phua Aub AW-D d12-2075
