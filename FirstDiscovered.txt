@@ -643,3 +643,8 @@ Phua Aub AN-G c25-5224
 Phua Aub MX-U f2-4148
 Phua Aub DD-G c25-5
 Phua Aub AW-D d12-2075
+Phua Aub KZ-D c26-203
+Phua Aub EW-N e6-6787
+Phua Aub PF-C c27-3500
+Phua Aub PF-C c27-1427
+Phua Aub TO-I d9-115
