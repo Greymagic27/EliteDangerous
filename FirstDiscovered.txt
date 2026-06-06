@@ -51,6 +51,7 @@ Leamue UV-C d13-5806
 Leamue AC-B d14-7089
 Kyloarph XI-B d2443
 Kyloaln QT-Z d7079
+Kyloaln YU-X d1-2520
 Kyloaln FG-X e1-5844
 Kyloabs JO-P d6-7548
 Kyloabs ZL-K d9-5467
