@@ -671,3 +671,7 @@ Phua Aub LN-Z c27-5472
 Phua Aub LN-Z c27-4196
 Phua Aub WA-Z b55-177
 Phua Aub HH-B c27-8576
+Phua Aub HH-B c27-262
+Phua Aub HH-B c27-4604
+Phua Aub HH-B c27-4639
+Phua Aub NN-B d13-2624
