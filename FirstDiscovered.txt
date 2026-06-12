@@ -321,6 +321,7 @@ Swoilz AV-G a106-1
 Swoilz YM-F a93-4
 M7 Sector VS-A a30-0
 M7 Sector JJ-S a20-4
+M7 Sector QD-Q b6-2
 M7 Sector FL-V b3-5
 M7 Sector YY-Y b1-6
 Swoilz CG-E a38-0
@@ -675,3 +676,5 @@ Phua Aub HH-B c27-262
 Phua Aub HH-B c27-4604
 Phua Aub HH-B c27-4639
 Phua Aub NN-B d13-2624
+Phua Aub AV-G d10-6618
+Phroi Pri FN-Q d6-7159
