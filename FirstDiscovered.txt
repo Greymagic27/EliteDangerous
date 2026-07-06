@@ -679,3 +679,8 @@ Phua Aub HH-B c27-4639
 Phua Aub NN-B d13-2624
 Phua Aub AV-G d10-6618
 Phroi Pri FN-Q d6-7159
+Drojau DL-M b40-2
+Byoi Eurk BY-H c23-1
+Byoi Eurk YV-E d11-98
+Byoi Eurk YV-E d11-5
+Byoi Eurk EH-O b47-7
