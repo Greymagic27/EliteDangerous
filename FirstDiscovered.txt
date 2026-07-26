@@ -601,6 +601,7 @@ Mylaifai UW-J a8-38
 Mylaifai JC-B d1-5518
 Mylaifai JC-B d1-4523
 Mylaifai XA-B a13-1
+Froarks YD-T d3-2294
 Bleae Aewsy KC-D d12-622
 Dryao Aowsy GM-D d12-4454
 Dryao Aowsy LS-B d13-339
@@ -690,3 +691,37 @@ Nyeajeou TN-A d1-53
 Nyeajeou HZ-Y b5-3
 Nyeajeou PQ-V b7-3
 Nyeajeou VM-S b9-0
+Flyua Hypa LE-H b1-2
+Pyralea HC-C c29-2
+Pyralea LZ-C b59-5
+Pyralea BI-F b58-2
+Pyralea QQ-H b57-6
+Pyralea GZ-J b56-4
+Byoi Eurk JI-B d13-155
+Byoi Eurk SG-B c27-31
+Byoi Eurk TG-B c27-2
+Byoi Eurk VU-X b56-0
+Flyua Hypa SF-X a28-7
+Prielu MC-T c17-14
+Pro Aim RO-V b43-1
+Blau Aescs LA-A d546
+Blau Aescs LA-A d637
+Blau Aescs FA-A e113
+Blau Aescs LA-A d889
+Blau Aescs SR-Y b49
+Blau Aescs LA-A d984
+Blau Aescs SR-Y b14
+Blau Aescs LA-A d242
+Blau Aescs LA-A d473
+Blau Aescs TF-A c209
+Blau Aescs TF-A c119
+Blau Aescs KA-A d240
+Blau Aescs PA-U a3-1
+Blau Aescs PA-U a3-0
+Blau Aescs FA-A e300
+Blau Aescs VX-W b1-62
+Blau Aescs XL-Y c148
+Blau Aescs VX-W b1-61
+Blau Aescs FA-A e299
+Blau Aescs FA-A e259
+Blau Aescs FA-A e297
