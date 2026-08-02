@@ -725,3 +725,20 @@ Blau Aescs VX-W b1-61
 Blau Aescs FA-A e299
 Blau Aescs FA-A e259
 Blau Aescs FA-A e297
+Blau Aescs FA-A e148
+Blau Aescs FA-A e213
+Blau Aescs ML-Y d138
+Blau Aescs IO-I b23-79
+Blau Aescs JL-P d5-1124
+Blaa Hypa BJ-R c21-978
+Blaa Hypa HK-P c22-364
+Blaa Hypa IY-F d12-2027
+Greae Hypa QS-A d1-2339
+Greae Hypa QS-A d1-3588
+Greae Hypa HW-L d8-114
+Greae Hypa KH-T d4-453
+Greae Hypa BA-Y d1-379
+Blaa Hypa CX-J d9-236
+Clookau US-B d72
+Clookau VQ-H b1
+Eol Prou CS-Z c14-169
