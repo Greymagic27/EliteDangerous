@@ -742,3 +742,17 @@ Blaa Hypa CX-J d9-236
 Clookau US-B d72
 Clookau VQ-H b1
 Eol Prou CS-Z c14-169
+Eol Prou FK-Z b29-34
+Eol Prou CS-Z c14-174
+Eol Prou JZ-Y a59-0
+Eol Prou OI-T e3-18
+Eol Prou CS-Z c14-156
+Eol Prou DP-Z b29-55
+Eol Prou CS-Z c14-203
+Eol Prou ZI-B b29-10
+Eol Prou AD-B a59-0
+Eol Prou ZI-B b29-2
+Eol Prou RY-Z d503
+Eol Prou PD-A d1-887
+Eol Prou PD-A d1-1091
+Eol Prou TQ-Z c2-106
