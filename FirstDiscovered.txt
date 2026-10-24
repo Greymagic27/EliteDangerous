@@ -1,3 +1,4 @@
+Pyraleau DH-Q b24-8
 Pyraleau CB-I c12-33
 Pyraleau ES-O b25-1
 Pyraleau ES-O b25-0
@@ -175,6 +176,7 @@ Prua Phoe YH-C b17-1
 Prua Phoe GJ-N b38-14
 Clooku CQ-M b25-54
 Blua Hypue VM-H d11-1739
+Blua Hypue AT-F d12-1277
 Puekoa OA-A b31
 Nuekuae QT-Q e5-26
 Blaa Phoe CB-W e2-67
@@ -189,6 +191,7 @@ Whambio DF-Z d5492
 Whambio ZT-Q d5-6349
 Dryao Aoscs PZ-O d6-2898
 Dryao Aoscs US-C c28-93
+Dryao Aoscs YG-B d14-1728
 Ogaiws RI-A d1-3784
 Ogaiws YE-Z e4493
 Ogaiws AL-V d3-2829
@@ -328,6 +331,7 @@ M7 Sector YY-Y b1-6
 Swoilz CG-E a38-0
 Swoilz OS-W b7-3
 Swoilz ZT-D b4-1
+Swoilz HD-U b22-0
 Swoilz DX-R d5-71
 Aucoks WS-J b1
 Aucoks HG-K c10-2
@@ -552,7 +556,6 @@ Drojeae EV-M c8-0
 Drojeae DV-M c8-3
 Drojeae SX-V b18-0
 Drojeae DA-S b20-0
-Nyeajaae SC-V d2-7
 Flyiedgiae XG-Z b28-0
 Flyiedgiae DB-O d6-12
 Flyiedgiae ND-A c14-3
@@ -738,6 +741,7 @@ Greae Hypa QS-A d1-3588
 Greae Hypa HW-L d8-114
 Greae Hypa KH-T d4-453
 Greae Hypa BA-Y d1-379
+Blaa Hypa VV-C d13-837
 Blaa Hypa CX-J d9-236
 Clookau US-B d72
 Clookau VQ-H b1
@@ -794,3 +798,8 @@ Dryooe Flyou IF-C d14-763
 Dryooe Flyou IF-C d14-805
 Dryooe Flyou RH-F b58-17
 Dryooe Flyou IF-C d14-3989
+Dryaea Aob QM-H c24-140
+Dryaea Aob WQ-D d12-1914
+Dryaea Aob QM-H c24-80
+Dryaea Aob QM-H c24-587
+Dryaea Aob LF-N b49-148
