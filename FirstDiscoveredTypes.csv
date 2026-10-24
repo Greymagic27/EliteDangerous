@@ -1,4 +1,5 @@
 system,type
+Pyraleau DH-Q b24-8,M (Red dwarf) Star
 Pyraleau CB-I c12-33,K (Yellow-Orange) Star
 Pyraleau ES-O b25-1,M (Red dwarf) Star
 Pyraleau ES-O b25-0,M (Red dwarf) Star
@@ -176,6 +177,7 @@ Prua Phoe YH-C b17-1,M (Red dwarf) Star
 Prua Phoe GJ-N b38-14,M (Red dwarf) Star
 Clooku CQ-M b25-54,M (Red dwarf) Star
 Blua Hypue VM-H d11-1739,Neutron Star
+Blua Hypue AT-F d12-1277,Neutron Star
 Puekoa OA-A b31,M (Red dwarf) Star
 Nuekuae QT-Q e5-26,B (Blue-White) Star
 Blaa Phoe CB-W e2-67,Neutron Star
@@ -190,6 +192,7 @@ Whambio DF-Z d5492,Neutron Star
 Whambio ZT-Q d5-6349,F (White) Star
 Dryao Aoscs PZ-O d6-2898,Neutron Star
 Dryao Aoscs US-C c28-93,K (Yellow-Orange) Star
+Dryao Aoscs YG-B d14-1728,Neutron Star
 Ogaiws RI-A d1-3784,Neutron Star
 Ogaiws YE-Z e4493,Neutron Star
 Ogaiws AL-V d3-2829,Neutron Star
@@ -329,6 +332,7 @@ M7 Sector YY-Y b1-6,M (Red dwarf) Star
 Swoilz CG-E a38-0,Y (Brown dwarf) Star
 Swoilz OS-W b7-3,M (Red dwarf) Star
 Swoilz ZT-D b4-1,M (Red dwarf) Star
+Swoilz HD-U b22-0,M (Red dwarf) Star
 Swoilz DX-R d5-71,G (White-Yellow) Star
 Aucoks WS-J b1,M (Red dwarf) Star
 Aucoks HG-K c10-2,G (White-Yellow) Star
@@ -553,7 +557,6 @@ Drojeae EV-M c8-0,K (Yellow-Orange) Star
 Drojeae DV-M c8-3,K (Yellow-Orange) Star
 Drojeae SX-V b18-0,M (Red dwarf) Star
 Drojeae DA-S b20-0,M (Red dwarf) Star
-Nyeajaae SC-V d2-7,Neutron Star
 Flyiedgiae XG-Z b28-0,M (Red dwarf) Star
 Flyiedgiae DB-O d6-12,F (White) Star
 Flyiedgiae ND-A c14-3,G (White-Yellow) Star
@@ -739,6 +742,7 @@ Greae Hypa QS-A d1-3588,Neutron Star
 Greae Hypa HW-L d8-114,Neutron Star
 Greae Hypa KH-T d4-453,Neutron Star
 Greae Hypa BA-Y d1-379,Neutron Star
+Blaa Hypa VV-C d13-837,Neutron Star
 Blaa Hypa CX-J d9-236,Neutron Star
 Clookau US-B d72,F (White) Star
 Clookau VQ-H b1,M (Red dwarf) Star
@@ -795,3 +799,8 @@ Dryooe Flyou IF-C d14-763,A (Blue-White) Star
 Dryooe Flyou IF-C d14-805,F (White) Star
 Dryooe Flyou RH-F b58-17,M (Red dwarf) Star
 Dryooe Flyou IF-C d14-3989,A (Blue-White) Star
+Dryaea Aob QM-H c24-140,K (Yellow-Orange) Star
+Dryaea Aob WQ-D d12-1914,ERROR
+Dryaea Aob QM-H c24-80,K (Yellow-Orange) Star
+Dryaea Aob QM-H c24-587,K (Yellow-Orange) Star
+Dryaea Aob LF-N b49-148,M (Red dwarf) Star
