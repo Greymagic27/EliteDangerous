@@ -803,3 +803,13 @@ Dryaea Aob WQ-D d12-1914
 Dryaea Aob QM-H c24-80
 Dryaea Aob QM-H c24-587
 Dryaea Aob LF-N b49-148
+Dryaea Aob LF-N b49-7
+Dryaea Aob LF-N b49-45
+Dryaea Aob LF-N b49-83
+Dryaea Aob QM-H c24-590
+Dryaea Aob QM-H c24-339
+Dryaea Aob LF-N b49-127
+Dryaea Aob AR-Y a99-1
+Dryaea Aob US-F c25-206
+Dryaea Aob EG-Y g755
+Dryaea Aob US-F c25-313
